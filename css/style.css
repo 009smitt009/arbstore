@@ -136,11 +136,11 @@ line-height: 25px;
 } */
 
 /* .menu_item__logo span{
-    margin-left:10px;
+    font-size: 18px;
 } */
 
 .menu_item__button{
-    width: 141px;
+    width: 123px;
     height: 45px;
     background: linear-gradient(90deg, #009AFF 0%, #1E4FC6 100%);
     border-radius: 10px;
@@ -175,8 +175,12 @@ line-height: 25px;
 }
 
 .header__list li{
+    margin: 0px 0px 0px 20px;
     position: relative;
+    
 }
+
+
 
 .header__link:hover::after{
     content:'';
@@ -190,8 +194,9 @@ line-height: 25px;
     left: -10px;
 }
 
+
+
 a.active_page{
-    
     color: #009AFF;
  }
 
@@ -201,7 +206,7 @@ a.active_page{
 
 .description_block {
     display: flex;
-    /* background: no-repeat right top url(/arbstore/img/back-img-aura.svg);
+    /* background: no-repeat right top url(arbstore/img/back-img-aura.svg);
     background-size: cover;
     margin: 0px 0px -60px 0px; */
     
@@ -240,8 +245,8 @@ a.active_page{
     left: -225px;*/
     margin: 0 auto; 
    
-    background: no-repeat right top url(/arbstore/img/back-img-aura.svg);
-                /* no-repeat center url(/arbstore/img/back-img.svg); */
+    background: no-repeat right top url("/img/back-img-aura.svg");
+                /* no-repeat center url(arbstore/img/back-img.svg); */
      
      top: -171px;
      left: -230px;
@@ -279,13 +284,17 @@ a.active_page{
 }
 
 .test{
-    /* background: no-repeat url(/arbstore/img/back-img-aura.svg);
+    /* background: no-repeat url(arbstore/img/back-img-aura.svg);
     width: 1000px;
     height: 800px;
     object-fit: cover;
     overflow: hidden;
     /* margin-left: 300px; */
     /* margin: 0 auto;  */
+}
+
+.index_container{
+    color: #FFFFFF;
 }
 
 .description_block__market img{
@@ -297,16 +306,82 @@ a.active_page{
     font-size: 28px;
     line-height: 38px;
     color: #FFFFFF;
+    text-align: center;
     margin: 51px 0px 0px 0px;
 }
+.main_text p:nth-child(2){
+   margin: 50px 0px 50px 0px;
+}
 
-.main_text p:last-child{
+.howtostart_table_header>p{
+    margin: 60px 0px 80px 0px;
+}
+
+
+
+.header_text{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.howtostart_table{
+    font-size: 28px;
+    line-height: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.howtostart_table>:nth-child(n){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin: 0px 0px 160px 0px; */
+
+}
+
+.howtostart_table>:last-child{
+    
+    /* flex-direction: column; */
+    /* margin: 0px 0px 160px 0px; */
+
+}
+
+.howtostart_table>:nth-child(n):not(:last-child){
+    
+    margin: 0px 0px 160px 0px;
+
+}
+
+
+
+
+.howtostart_table>:nth-child(n) p{
+    max-width: 320px;
+    
+}
+
+.howtostart_table>:nth-child(n) img{
+   margin: 0px 0px 0px 20px;
+    
+}
+
+
+/* .howtostart_table_block1{
+    display: flex;
+    flex-direction: row;
+} */
+.text_button_sign{
     font-size: 23px;
     line-height: 31.32px;
-    padding: 83px 0px 0px 0px;
+    margin: 83px 0px 0px 0px;
     text-align: center;
     color: rgba(255, 255, 255, 0.62);
 }
+
+
 .button-sign{
     width: 141px;
     height: 42px;    
@@ -362,7 +437,9 @@ a.active_page{
     /* display: flex; */
 }
 
-.button_filter button{
+
+
+.button_filter__finance,.button_filter__it {
     width: 134px;
     height: 42px;
     font-weight: bold;
@@ -375,18 +452,35 @@ a.active_page{
     
 }
 
-
-
-.button_filter button:hover{
+.button_filter__finance._active{
     background: #009AFF;
     color: #fff;
 }
-.finance{
+
+.button_filter__it._active{
+    background: #009AFF;
+    color: #fff;
+}
+
+/* .button_filter button:hover{
+    background: #009AFF;
+    color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+} */
+
+
+.button_filter__finance{
     margin: 0px 0px 0px 16px;
 }
-.it{
+
+
+
+.button_filter__it{
     margin: 0px 0px 0px 40px;
 }
+
+
 
 .arbiter_items{
     
@@ -396,6 +490,14 @@ a.active_page{
     /* margin: 0 auto; */
     margin: 43px 0px 37px 0px;
     
+}
+
+.my-temlate{
+    display: none;
+}
+
+.my-template-popup{
+    display: none;
 }
 
 .arbiter_item{
@@ -713,9 +815,17 @@ table tr td:nth-child(2) {
         width: 903px;
         margin: 0 auto ;
     }
+    .file_preview img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        object-position: center;
+        
+    }
 
-
-
+    #file_img_load{
+        display: none;
+    }
     .block-foto{
         display: flex;
         align-items: center;
@@ -782,12 +892,16 @@ table tr td:nth-child(2) {
     .formspecialization_data{
         display: flex;
         flex-direction: column;
+        width: 515px;
+        
+        
 
     }
     
+    
     .formspecialization_data input[type="checkbox"]{
 
-        margin: 15px 0px 10px 0px
+        margin: 15px 10px 10px 0px
     }
 
     .formspecialization_data label{
@@ -798,11 +912,33 @@ table tr td:nth-child(2) {
         
     }
 
-    .form_input_req_specializationit{
-        /* display: none; */
+    /* option{
+        font-size: 18px;
+        color: red;
     }
+*/
+     .uk-margin{
+        /* color: black;
+        font-size: 18px;
+        position: relative;
+        top: 0;
+        left: 0; */
+        /* background-color: inherit; */
+    } 
+/**/
+    /* select{
+        background-color: inherit;
+    }  */
+    .select2-container{
+        /* width:200px ;  */
+    }
+    
 
-    .form_input_req_specializationInsurance{
+    /* .form_input_req_specializationit{ */
+        /* display: none; */
+    /* } */
+
+    /* .form_input_req_specializationInsurance{
         display: none;
     }
 
@@ -811,6 +947,12 @@ table tr td:nth-child(2) {
     }
 
     .form_input_req_specializationRealestate{
+        display: none;
+    } */
+    .visible_input{
+        /* opacity: 0;
+        visibility: hidden;
+        font-size: 0; */
         display: none;
     }
 
@@ -842,10 +984,135 @@ table tr td:nth-child(2) {
     .parking_page{
         width: 100vw;
         height: 100vh;
-      background: no-repeat center url("/arbstore/img/parking1400.svg");
+      background: no-repeat center url("img/parking1400.svg");
     }
 
+    /* about.html */
+    .content_about, .content_partners{
+        font-size: 30px;
+        line-height: 41px;
+        color: #FFFFFF;
+    }
+
+    .content_about>p{
+        text-align: center;
+        margin: 70px 0px 0px 0px;
+    }
+
+    .about_pay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 65px 0px 0px 0px;
+    }
+    .about_pay_img{
+        margin: 0px 0px 45px 0px;
+        /* max-width: 200px; */
+        /* flex: 1 1 auto; */
+    }
+    .about_pay_text{
+        /* flex: 1 1 50%; */
+        text-align: center;
+    }
+
+    .platform_table_header>p{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        margin: 60px 0px 50px 0px;
+    }
+
+    .platform_table{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .platform_table_block1, .platform_table_block2{
+        display: flex;
+        /* flex: 1 1 40%; */
+        flex-direction: column;
+        /* align-items: center; */
+        max-width: 499px;
+
+    }
     
+   
+
+    .p2p_text{
+        text-align: center;
+        margin: 60px 0px 0px 0px;
+    }
+    .smart_contracts_text{
+        text-align: center;
+        margin: 60px 0px 90px 0px;
+    }
+
+    .platform_table p{
+        position: relative;
+        padding: 0px 0px 0px 60px;
+        margin: 50px 0px 0px 0px;
+    }
+
+    .platform_table p::before{
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        /* overflow: hidden; */
+        background: linear-gradient(90deg, #009AFF 0%, #1E4FC6 100%);
+    }
+    
+
+    /* partners.html */
+    
+    .content_partners{
+        text-align: center;
+    }
+    .partners_block1{
+        margin: 0px 0px 30px 0px;
+       
+    }
+    .partners_block2{
+        margin: 0px 0px 40px 0px;
+       
+    }
+    .partners_block2 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+       
+    }
+    .partners_block3{
+        margin: 0px 0px 80px 0px;
+       
+    }
+
+    .partners_block3>:last-child{
+        padding: 100px 0px 0px 0px;
+        
+    }
+
+
+    .platform_table_percentage{
+        display: flex
+        
+    }
+
+    .platform_table_percentage_value{
+        flex: 1 1 33.333%;
+    }
+    
+    .link_p2p{
+        color: #55ADFF;
+    }
 
     /* .formspecialization_data input[type="checkbox"]:checked{
         display: block;
@@ -972,7 +1239,7 @@ table tr td:nth-child(2) {
     }
 
     .main_text{
-        margin: -50px 0px 0px 0px;
+        margin: 62px 0px 0px 0px;
     }
 
     .menu_item__nav a{ 
@@ -986,11 +1253,15 @@ table tr td:nth-child(2) {
 
     .parking_page{
            
-          background: no-repeat center url("/arbstore/img/parking960.svg");
+          background: no-repeat center url("img/parking960.svg");
     }  
 }
 
 @media (max-width:770px){
+
+    .main_text{
+        margin: -44px 0px 0px 0px;
+    }
 
     .description_block__img{
         display: none;
@@ -1006,7 +1277,7 @@ table tr td:nth-child(2) {
         margin: 0 auto;
         /* max-width: 619px;
         max-height: 488px; */
-        /* background: no-repeat center url("/arbstore/img/backlogo640.png");   */
+        /* background: no-repeat center url("arbstore/img/backlogo640.png");   */
         /* margin: 0 auto;
         object-fit: cover; */
     }
@@ -1079,35 +1350,78 @@ table tr td:nth-child(2) {
     }
 
     .header__list li{
-       text-align:  center;
+       /* text-align:  center; */
     }
     
 
 
     .parking_page{
            
-        background: no-repeat center url("/arbstore/img/parking640.svg");
+        background: no-repeat center url("img/parking640.svg");
     } 
     
     .description_block__market img{
         margin: 0px 0px 0px 5px;
         transform: scale(0.9);
-     }
-        
+    }
+
+    .description_block__text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .main_text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .howtostart_table {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .text_button_sign {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    
+    .howtostart_table_header>p{
+        font-size: 22px;
+        line-height: 30px;
+    } 
 }
 
 
 @media (max-width:480px){
         .parking_page{
            
-          background: no-repeat center url("/arbstore/img/parking480.svg");
-        }  
+          background: no-repeat center url("arbstore/img/parking480.svg");
+        } 
+
+        .howtostart_table>:nth-child(n){
+            flex-direction: column-reverse;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .howtostart_table>:nth-child(n):not(:last-child) {
+            margin: 0px 0px 90px 0px;
+        }
+
+        .howtostart_table>:nth-child(n) p{
+            margin: 20px 0px 0px 0px;
+            text-align: center;
+        }
+
+        
+        
 }
 
 @media (max-width:320px){
         .parking_page{
            
-          background: no-repeat center url("/arbstore/img/parking320.svg");
+          background: no-repeat center url("arbstore/img/parking320.svg");
         }  
 }
 
@@ -1179,6 +1493,15 @@ table tr td:nth-child(2) {
         width: 560px;
         height: 400px;
         margin-left: 12px;
+    }
+
+
+    .arbiter_item {
+        height: auto;
+    }
+
+    .arbitier_item__button-info{
+        margin: 22px 0px 10px 0px; 
     }
 }
 
@@ -1328,6 +1651,10 @@ table tr td:nth-child(2) {
         margin: 0 auto;
 
 
+    }
+
+    .formspecialization_data{
+        margin: 0px -141px 0px 0px;
     }
 
     .form_item:first-child input[type="checkbox"]{
@@ -1508,7 +1835,7 @@ table tr td:nth-child(2) {
     z-index: 3;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 25px;
     
   }
@@ -1534,7 +1861,7 @@ table tr td:nth-child(2) {
   }
   
   .header__list li {
-    margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 15px;
     white-space:nowrap
     }   
   
@@ -1572,15 +1899,16 @@ table tr td:nth-child(2) {
 }
   
 
-@media (max-width:960px){
+/* @media (max-width:960px){
     .header__link {
         
         
         font-size: 14px;
         line-height: 19px;
       }
-}
-  @media (max-width: 640px) {
+} */
+
+@media (max-width: 960px) {
 
     .adp2_button{
         display: none;
@@ -1595,6 +1923,11 @@ table tr td:nth-child(2) {
         position: relative;
         left: 50%;
         margin: 40px 0px 0px -55px;
+    }
+
+    .header__body.active{
+        margin: 0px auto;
+        width: 460px;
     }
 
     
@@ -1673,9 +2006,9 @@ table tr td:nth-child(2) {
       height: 50px;
     }
     .header__logo {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 40px;
-              flex: 0 0 40px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 40px;
+        flex: 0 0 40px;   
     }
     /* .header__list {
         display: block;
@@ -1685,14 +2018,21 @@ table tr td:nth-child(2) {
     } */
 
     .header__list {
-        display: block;
+        /* display: block;
         position: relative;
+        left: 50%;
         
-        margin: 21px 5px 0px -14px;
+        margin: 21px 5px 0px -80px; */
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        margin: 21px 0px 0px 0px;
     }
+   
 
     .header__list li {
       padding: 0px 0px 20px 0px;
+      
     }
     .content {
       padding: 60px 0px 0px 0px;
@@ -1703,5 +2043,71 @@ table tr td:nth-child(2) {
     .header__link {
       font-size: 24px;
     }
+  }
+
+  @media (max-width:640px){
+    .header__list li {
+        padding: 0px 0px 35px 0px;
+        
+    }
+  }
+
+  @media (max-width:460px){
+    .header__body.active{
+        width:auto;
+        margin: 0px 0px;
+    }
+  }
+
+  /* about.html медиа запросы */
+  @media (max-width:640px){
+      .platform_table{
+          flex-direction: column;
+      }
+
+      .content_about {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .platform_table_header>p {
+       
+        font-size: 22px;
+        line-height: 30px;
+        
+        margin: 50px 0px 0px 0px;
+    }
+    .about_pay_img img{
+        width: 100%;
+       
+    }
+
+    .about_pay_img{
+        margin: 0px 0px 30px 0px;
+        /* max-width: 200px; */
+        /* flex: 1 1 auto; */
+    }
+
+  }
+
+  /* partners.html */
+  @media (max-width:640px){
+    .content_partners {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .platform_table_percentage{
+        flex-direction: column;
+    }
+    .platform_table_percentage_value{
+        margin: 50px 0px 0px 0px;
+    }
+
+    .platform_table_percentage_value img{
+        transform: scale(0.8);
+        margin: 0px 0px 20px 0px;
+    }
+
+
   }
   
